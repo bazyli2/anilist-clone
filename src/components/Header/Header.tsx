@@ -1,4 +1,4 @@
-export function AppBar() {
+export function Header() {
   return (
     <div>app bar</div>
   )
