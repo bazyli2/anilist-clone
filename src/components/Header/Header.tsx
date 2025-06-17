@@ -1,5 +1,7 @@
 export function Header() {
   return (
-    <div>app bar</div>
+    <header className="hidden lg:flex bg-dark-gunmetal min-h-20 px-12 items-center">
+      header
+    </header>
   )
 }
