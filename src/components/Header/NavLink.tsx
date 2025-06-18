@@ -1,8 +1,10 @@
+import { PolymorphicComponentProps } from "@/utils/polymorphic";
 import Link from "next/link";
-import { ComponentProps } from "react";
+import { ElementType } from "react";
 
-export function NavLink(props: ComponentProps<typeof Link>) {
+export function NavLink<C extends ElementType = typeof Link>(props: PolymorphicComponentProps<C>) {
+  const Component: ElementType = props.as || Link;
   return (
-    <Link className="text-sm text-soap px-5 py-4 tracking-wide" {...props} />
+    <Component className="text-sm text-soap px-5 py-4 tracking-wide" {...props} />
   )
 }
