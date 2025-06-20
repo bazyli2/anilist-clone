@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
+import { NavLinks } from "./NavLinks";
 
 export function Header() {
   return (
@@ -7,6 +8,7 @@ export function Header() {
       <Link href='/'>
         <Logo width={50} height={50} />
       </Link>
+      <NavLinks />
     </header>
   )
 }
